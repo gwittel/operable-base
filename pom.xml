@@ -281,10 +281,13 @@
                     </configuration>
                 </plugin>
 
+                <!-- 2017-11-02 This is broken in Java 9
+                    https://issues.apache.org/jira/browse/MDEP-559
+                -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.10</version>
+                    <version>3.0.2</version>
                     <configuration>
                         <skip>${op.check.skip-dependency}</skip>
                         <failOnWarning>${op.check.fail-dependency}</failOnWarning>
