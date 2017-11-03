@@ -54,27 +54,17 @@ Package: aggregators.approximate
 
 # Notes
 
-## Maven Configuration
+# Known Issues
 
-### Repositories
+These are to be converted to Github Issues
 
-By default, no repository is explicitly specified for dependencies.
-
-Your Maven configuration should include the following repositories:
-
-```xml
-
-    <repositories>
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-```
+1. Maven plugin broken due to ASM Java 9 bugs:
+    * maven-dependency-plugin -- See [MDEP-559](https://issues.apache.org/jira/browse/MDEP-559)
+    * modernizer -- gaul/modernizer-maven-plugin#60
+    
+    Workaround is to disable the plugins via properties:
+   
+    ```xml
+    <op.check.skip-dependency>true</op.check.skip-dependency>
+    <op.check.skip-modernizer>true</op.check.skip-modernizer>
+    ```
