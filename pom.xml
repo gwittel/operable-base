@@ -146,7 +146,7 @@
         <!-- Dependency versions that should be the same everywhere. -->
         <dep.guice.version>4.2.0</dep.guice.version>
         <dep.guava.version>25.0-jre</dep.guava.version>
-        <dep.jackson.version>2.10.2</dep.jackson.version>
+        <dep.jackson.version>2.12.1</dep.jackson.version>
         <dep.cglib.version>2.2.2</dep.cglib.version>
         <dep.joda.version>2.9.9</dep.joda.version>
         <dep.spotbugs-annotations.version>3.1.0-RC5</dep.spotbugs-annotations.version>
